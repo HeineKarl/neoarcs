@@ -1,0 +1,115 @@
+.about {
+    // background: linear-gradient(125deg,  #110312 10% ,#110312 40%, #220424 100%);
+    background: white;
+    
+
+    &__container {
+        // background-color: green;
+        height: 400px;
+        display: grid;
+        grid-template-rows: 20% 30% 40%;
+    }
+    &__title {
+        align-self: center;
+        justify-self: center;
+        grid-row: 2 / 3;
+        font-size: 50px;
+        h3 {
+            font-weight: 300;
+        }
+    }
+    &__desc {
+        align-self: center;
+        justify-self: center;
+        grid-row: 3 / 4;
+        p {
+            width: 800px;
+            height: 100%;
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+
+    &__arcs {
+        background-color: green;
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 50%);
+    }
+}
+
+.article {
+    background-image: url(../img/article.jpg);
+}
+.research {
+    background-image: url(../img/research.jpg);
+}
+.communication {
+    background-image: url(../img/communication.jpg);
+}
+.system {
+    background-image: url(../img/system.jpg);
+}
+
+.article,
+.research,
+.communication,
+.system {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    &:hover .define {
+        opacity: 1;
+        pointer-events: all;
+        transform: translate(-50%,-50%);
+
+    }
+
+    &:hover .arcs {
+        // opacity: .09;
+        font-size: 250px;
+        background-color: rgba(255,255,255,.8);
+    }
+
+    &:hover .arcs h3 {
+        opacity: 0.15;
+        transform: translate(-35%, -10%);
+    }
+}
+
+.article-title,
+.research-title,
+.communication-title,
+.system-title {
+    background-color: rgba(255,255,255,.3);
+    text-align: center;
+    line-height: 250px;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease;
+    font-size: 100px;
+    h3 {
+        transition: all 500ms ease;
+    }
+}
+
+.article-define,
+.research-define,
+.communication-define,
+.system-define {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    width: 500px;
+    text-align: center;
+    transition: all 500ms ease;
+    opacity: 0;
+    pointer-events: none;
+}

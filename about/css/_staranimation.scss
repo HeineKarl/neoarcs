@@ -1,0 +1,134 @@
+.star-container {
+    // background-color: rgba(0,0,0,.5);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(25deg);
+    // clip-path: circle(50% at 50% 50%);
+}
+.star {
+    background: linear-gradient(-45deg, #5f91ff, rgba(0,0,255,0));
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 6px #699bff);
+    animation: tail 2s ease-in-out infinite,
+               falling 2s ease-in-out infinite;
+}
+
+
+.star::before, .star::after {
+    background: linear-gradient(45deg, rgba(0,0,255,0), #699bff,#e4e7ee,#699bff, rgba(71, 71, 228, 0));
+    content: '';
+    height: 2px;
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0%;
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(65deg);
+    animation: shining 2s ease-in-out infinite;
+}
+.star::after {
+    transform: translateX(50%) rotateZ(-25deg);
+}
+                                                                        // Animations
+@keyframes tail {
+    0% {
+        width: 0px;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+@keyframes falling {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(350px);
+    }
+}
+
+@keyframes shining {
+    0% {
+        width: 0px;
+    }
+    50% {
+        width: 25px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+.star:nth-child(1) {
+    top: calc(50% - 20px);
+    left: calc(50% - 200px);
+    animation-delay: 150ms;
+}
+.star:nth-child(1)::before, .star:nth-child(1)::after {
+    animation-delay: 150ms;
+}
+
+
+
+// Static Star
+
+
+.star-light:nth-child(1) {
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    top: calc(10%);
+    left: 45%;
+    border-radius: 100%;
+    transform: translateX(-50%) rotateZ(0deg);
+    animation: glance 2000ms ease-in-out infinite;
+}
+
+.star-light:nth-child(2) {
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    top: calc(25%);
+    left: 60%;
+    border-radius: 100%;
+    transform: translateX(-50%) rotateZ(0deg);
+    animation: glance 2000ms ease-in-out infinite;
+}
+.star-light::after {
+    background: linear-gradient(45deg, rgba(0,0,255,0), #699bff,#e4e7ee,#699bff, rgba(71, 71, 228, 0));
+    content: '';
+    height: 2px;
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0%;
+    border-radius: 100%;
+    transform: translateX(0%) rotateZ(90deg);
+    animation: glance 2000ms ease-in-out infinite;
+}
+@keyframes glance {
+    0% {
+        background: linear-gradient(45deg, rgba(0,0,255,0), #699bff,#e4e7ee,#699bff, rgba(71, 71, 228, 0));
+        filter: drop-shadow(0 0 6px #699bff);
+        width: 10px;
+    }
+    30% {
+        filter: drop-shadow(0 0 12px #dbe8ff);
+        background: linear-gradient(45deg, rgba(208, 208, 255, 0.151), #9dbdff,#ffffff, #9dbdff, rgba(208, 208, 255, 0.151));
+        width: 15px;
+    }
+    100% {
+        background: linear-gradient(45deg, rgba(0,0,255,0), #699bff,#e4e7ee,#699bff, rgba(71, 71, 228, 0));
+        filter: drop-shadow(0 0 6px #699bff);
+        width: 10px;
+    }
+}

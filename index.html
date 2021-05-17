@@ -1,2 +1,472 @@
-# neoarcs
-This is the project I have done when I was first year in SMCM.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neoarcs</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/45a6663b88.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="hero">
+      <!-- Header -->
+      <div class="hero__logo">
+        <div class="img-container">
+          <img src="./img/logowhite.png" alt="logo" />
+        </div>
+        <div class="name">
+          <span>Neoarcs</span>
+        </div>
+      </div>
+      <nav class="hero__nav">
+        <!-- Navigation Bar -->
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="./about/about.html">About</a>
+        </div>
+        <div class="nav-profile">
+          <a class="signin" href="#">Sign Up</a>
+          <a class="login" href="#">Login</a>
+        </div>
+      </nav>
+    </header>
+    <section class="modal">
+      <!-- Modal Header -->
+      <div class="login-modal">
+        <!-- Login Modal -->
+        <div class="modal-close">
+          <span>&#9587;</span>
+        </div>
+        <div class="logo-container">
+          <div class="logobx">
+            <img src="./img/logowhite.png" alt="" />
+          </div>
+          <div class="wordbx">
+            <h2>Neoarcs</h2>
+          </div>
+        </div>
+        <form class="formbx">
+          <div class="formbx__name">
+            <input class="input input-name" type="text" required />
+            <label class="label label-name" for="">
+              <span class="content span-name">Account Name / Arc Name</span>
+            </label>
+          </div>
+          <div class="formbx__password">
+            <input class="input input-password" type="password" required />
+            <label class="label label-password" for="">
+              <span class="content span-password">Password</span>
+            </label>
+          </div>
+          <button class="formbx__btn">Login</button>
+        </form>
+      </div>
+      <div class="signin-modal">
+        <!-- Sign In Modal -->
+        <div class="modal-close">
+          <span>&#9587;</span>
+        </div>
+        <div class="logo-container">
+          <div class="logobx">
+            <img src="./img/logowhite.png" alt="" />
+          </div>
+          <div class="wordbx">
+            <h2>Neoarcs</h2>
+          </div>
+        </div>
+        <form class="formbx">
+          <div class="formbx__name">
+            <input class="input input-name" type="text" required />
+            <label class="label label-name" for="">
+              <span class="content span-name">Account Name / Arc Name</span>
+            </label>
+          </div>
+          <div class="formbx__email">
+            <input class="input input-name" type="email" required />
+            <label class="label label-name" for="">
+              <span class="content span-name">Email</span>
+            </label>
+          </div>
+          <div class="formbx__password">
+            <input class="input input-password" type="password" required />
+            <label class="label label-password" for="">
+              <span class="content span-password">Password</span>
+            </label>
+          </div>
+          <button class="formbx__btn">Sign Up</button>
+        </form>
+      </div>
+    </section>
+    <main class="main">
+      <!-- Main Section -->
+      <div class="star-container">
+        <!-- Star Container -->
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+      <div class="static-star">
+        <div class="star-light"></div>
+        <div class="star-light"></div>
+        <div class="star-light"></div>
+        <div class="star-light"></div>
+        <div class="star-light"></div>
+      </div>
+      <div class="main-container">
+        <div class="carousel">
+          <!-- Carousel Container -->
+          <!-- <div class="carousel__input">
+                    <input id="stop" class="stop-btn" type="checkbox" onchange="pauseSlider()">
+                    <label for="stop">Pause</label>
+                </div> -->
+          <div class="carousel__bprev carousel__bprev--prev set-hidden">
+            <div class="carousel__prev"></div>
+          </div>
+          <ul class="carousel__tracker">
+            <li class="carousel__img current-slide">
+              <img src="img/slider1.jpg" alt="" />
+            </li>
+            <li class="carousel__img">
+              <img src="img/slider2.jpg" alt="" />
+            </li>
+            <li class="carousel__img">
+              <img src="img/slider3.jpg" alt="" />
+            </li>
+            <li class="carousel__img last-img">
+              <img src="img/slider4.jpg" alt="" />
+            </li>
+            <li class="carousel__img first-img">
+              <img src="img/slider5.jpg" alt="" />
+            </li>
+          </ul>
+          <div class="carousel__bnext carousel__bnext--next">
+            <div class="carousel__next"></div>
+          </div>
+          <div class="carousel__nav">
+            <div class="carousel__btn current-slide"></div>
+            <div class="carousel__btn"></div>
+            <div class="carousel__btn"></div>
+            <div class="carousel__btn"></div>
+            <div class="carousel__btn"></div>
+          </div>
+        </div>
+        <!-- End Carousel Container -->
+        <div class="main-content">
+          <h1 class="main__title">Neoarcs</h1>
+          <h2 class="main__subtitle">Information is always new!</h2>
+        </div>
+      </div>
+    </main>
+    <section class="about">
+      <!-- About Section -->
+      <div class="about__title">
+        <h3>About</h3>
+      </div>
+      <div class="about__desc">
+        <p>
+          Neoarcs was created from the Philippines at the year 2020. The main
+          goal of Neoarcs is to connect people around the world especially ...
+        </p>
+      </div>
+      <div class="about__cta">
+        <a href="../about/about.html">Read More</a>
+      </div>
+    </section>
+    <section class="features">
+      <!-- Articles -->
+      <section class="features__articles">
+        <div class="article-images left-column">
+          <div class="article-image">
+            <img src="./img/article1.jpg" alt="" />
+          </div>
+          <div class="article-image">
+            <img src="./img/article2.jpg" alt="" />
+          </div>
+          <div class="article-image">
+            <img src="./img/article3.jpg" alt="" />
+          </div>
+          <div class="article-image">
+            <img src="./img/article4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="article-content right-column">
+          <div class="article-title">
+            <h3>Share your Creativity on Articles.</h3>
+          </div>
+          <div class="article-circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="article-desc">
+            <p>
+              Unlock your passion, talent and create your own arc every year.
+              Tell your story and be a social influencer.
+            </p>
+          </div>
+          <div class="article-cta">
+            <a href="../login/index.html">Get More</a>
+          </div>
+        </div>
+      </section>
+      <section class="features__research">
+        <!-- Research -->
+        <div class="research-content left-column">
+          <div class="research-title">
+            <h3>Cite and get Reference to Research Paper.</h3>
+          </div>
+          <div class="research-circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="research-desc">
+            <p>
+              Let your research paper as significant as possible. Make surveys
+              and conduct research online.
+            </p>
+          </div>
+          <div class="research-cta">
+            <a href="../login/index.html">Cite Now</a>
+          </div>
+        </div>
+        <div class="research-images right-column">
+          <div class="research-image">
+            <img src="./img/research1.jpg" alt="" />
+          </div>
+          <div class="research-image">
+            <img src="./img/research2.jpg" alt="" />
+          </div>
+          <div class="research-image">
+            <img src="./img/research3.jpg" alt="" />
+          </div>
+          <div class="research-image">
+            <img src="./img/research4.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="features__chats">
+        <!-- Chat and Communication -->
+        <div class="chat-images left-column">
+          <div class="chat-image">
+            <img src="./img/article1.jpg" alt="" />
+          </div>
+          <div class="chat-image">
+            <img src="./img/article2.jpg" alt="" />
+          </div>
+          <div class="chat-image">
+            <img src="./img/article3.jpg" alt="" />
+          </div>
+          <div class="chat-image">
+            <img src="./img/article4.jpg" alt="" />
+          </div>
+        </div>
+        <div class="chat-content right-column">
+          <div class="chat-title">
+            <h3>Chat and Create Groups.</h3>
+          </div>
+          <div class="chat-circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="chat-desc">
+            <p>
+              Meet your research author, chat with your friends by creating
+              groups and be accurate as much as possible.
+            </p>
+          </div>
+          <div class="chat-cta">
+            <a href="../login/index.html">Join Now</a>
+          </div>
+        </div>
+      </section>
+      <section class="features__system">
+        <!-- System -->
+        <div class="system-content left-column">
+          <div class="system-title">
+            <h3>Create a new Account for your System.</h3>
+          </div>
+          <div class="system-circles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="system-desc">
+            <p>
+              Create your own account and control one part of the system as your
+              own arc. Interact and comment.
+            </p>
+          </div>
+          <div class="system-cta">
+            <a href="../login/index.html">Create Now</a>
+          </div>
+        </div>
+        <div class="system-images right-column">
+          <div class="system-image">
+            <img src="./img/system1.jpg" alt="" />
+          </div>
+          <div class="system-image">
+            <img src="./img/system2.jpg" alt="" />
+          </div>
+          <div class="system-image">
+            <img src="./img/system3.jpg" alt="" />
+          </div>
+          <div class="system-image">
+            <img src="./img/system4.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="ourteam">
+      <!-- Our Team Section -->
+      <div class="ourteam__title">
+        <h3>Meet Our Team</h3>
+      </div>
+      <div class="ourteam__cards">
+        <div class="card-container">
+          <div class="ourteam__card">
+            <!-- Card 1 -->
+            <div class="card-image">
+              <img src="./img/engineer_profile.jpg" alt="" />
+            </div>
+            <div class="card-info">
+              <div class="card-profile">
+                <h3>Paulo Policarpio</h3>
+                <p>Civil Engineering</p>
+              </div>
+              <div class="card-desc">
+                <p>
+                  Hi, I am from the Philippines and studied BS Civil
+                  Engineering. Now, I am working in Neoarcs.
+                </p>
+              </div>
+              <button class="card-cta">Read More</button>
+            </div>
+          </div>
+          <div class="ourteam__card">
+            <!-- Card 2 -->
+            <div class="card-image">
+              <img src="./img/webdev_profile.jpg" alt="" />
+            </div>
+            <div class="card-info">
+              <div class="card-profile">
+                <h3>Sebastian Benze</h3>
+                <p>Web Developer</p>
+              </div>
+              <div class="card-desc">
+                <p>
+                  Hi, I am from Germany and studied Computer Science. Now I am
+                  working in Neoarcs.
+                </p>
+              </div>
+              <button class="card-cta">Read More</button>
+            </div>
+          </div>
+          <div class="ourteam__card">
+            <!-- Card 3 -->
+            <div class="card-image">
+              <img src="./img/finance_profile.jpg" alt="" />
+            </div>
+            <div class="card-info">
+              <div class="card-profile">
+                <h3>Kimberly Cruz</h3>
+                <p>Mechanical Technology</p>
+              </div>
+              <div class="card-desc">
+                <p>
+                  Hi, I am from the Philippines and studied BS Mechanical
+                  Technology working in Neoarcs.
+                </p>
+              </div>
+              <button class="card-cta">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="join">
+      <!-- Get in touch -->
+      <h3>Let's Go and Sign Up Now</h3>
+      <div class="join__cta">
+        <a href="../login/index.html">Get Started</a>
+      </div>
+    </section>
+    <section class="info">
+      <!-- Info Section -->
+      <div class="contact-title">
+        <h3>Contact</h3>
+      </div>
+      <div class="info__contact">
+        <!-- phone contact 1 -->
+        <div class="contact phone">
+          <div class="contact-icon">
+            <span><i class="fas fa-phone-alt"></i></span>
+          </div>
+          <p>09993313912</p>
+        </div>
+        <!-- mail contact 2 -->
+        <div class="contact mail">
+          <div class="contact-icon">
+            <span><i class="fas fa-envelope"></i></span>
+          </div>
+          <p>Neoarcs@gmail.com</p>
+        </div>
+        <!-- web contact 3 -->
+        <div class="contact web">
+          <div class="contact-icon">
+            <span><i class="fas fa-globe"></i></span>
+          </div>
+          <a href="#">www.neoarcs.com</a>
+        </div>
+      </div>
+      <div class="vl"></div>
+      <!-- vertical line -->
+      <div class="socialmedia-title">
+        <h3>Follow Us</h3>
+      </div>
+      <div class="info__socialmedia">
+        <div class="media-container">
+          <!-- fb icon -->
+          <div class="media">
+            <a href="#"
+              ><span><i class="fab fa-facebook-square"></i></span
+            ></a>
+          </div>
+          <!-- twitter icon -->
+          <div class="media">
+            <a href="#"
+              ><span><i class="fab fa-twitter-square"></i></span
+            ></a>
+          </div>
+          <!-- instagram icon -->
+          <div class="media">
+            <a href="#"
+              ><span><i class="fab fa-instagram-square"></i></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <!-- footer -->
+      <p>All Rights Reserved 2020</p>
+    </footer>
+    <script src="./js/slider.js"></script>
+    <script src="./js/intersection.js"></script>
+    <script src="./js/sway.js"></script>
+  </body>
+</html>

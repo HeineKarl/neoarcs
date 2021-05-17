@@ -1,0 +1,103 @@
+.hero {
+  background-color: transparent;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  // position: fixed;
+  // top: 0;
+  z-index: 100;
+  transition: all 500ms ease;
+
+  &__logo {
+    // background-color: green;
+    width: 240px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 0 50px;
+
+    .img-container {
+      width: 65px;
+      height: 65px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .name {
+      height: 100%;
+      padding: 20px 0 0 0;
+      span {
+        color: $clr-white;
+        font-family: $font1;
+        font-size: 28px;
+      }
+    }
+  }
+
+  &__nav {
+    // --clr-navlinks: lightgreen;
+    // --clr-navprofile: lightcoral;
+    // background-color: lightcoral;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .nav-links {
+      // background-color: var(--clr-navlinks);
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      a {
+        color: $clr-white;
+        transition: all 250ms ease-in-out;
+        &:hover {
+          color: #e3c80f;
+        }
+      }
+    }
+    .nav-profile {
+      // background-color: lightgreen;
+      width: 40%;
+      display: flex;
+      justify-content: space-around;
+      .signin {
+        color: $clr-white;
+        text-align: center;
+        line-height: 30px;
+        border: 2px solid $clr-white;
+        border-radius: 20px;
+        width: 90px;
+        height: 35px;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          background-color: $clr-white;
+          color: $clr-primary;
+        }
+      }
+      .login {
+        background-color: $clr-secondary;
+        border: 2px solid $clr-secondary;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 20px;
+        width: 90px;
+        height: 35px;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    a {
+      font-family: $font2;
+      color: $clr-primary;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+.modals {
+    background: linear-gradient(125deg,  #00130a 10% ,#110312 40%, #163144 100%);
+    // background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: 20% 70% 10%;
+    overflow: hidden;
+    // z-index: 1;
+}
+
+
+.login-modal {   // Modal container
+    align-self: center;
+    justify-self: center;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    background: transparent;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    display: grid;
+    grid-template-rows: 5% 10% 20% 60% 5%;
+    grid-template-columns: 5% 1fr 10% 5%;
+    transition: all 500ms ease;
+    &:hover {
+        box-shadow: 0 0 16px rgba(255, 255, 255, 0.7);
+    }
+
+    .formbx {
+        grid-row: 4 / 5;
+        grid-column: 2 / 4;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 5% repeat(2, 30%) 20% 5%;
+        gap: 10px;
+        &__name {
+            align-self: center;
+            justify-self: center;
+            grid-row: 2 / 3;
+            color: $clr-white;
+            width: 300px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        &__password {
+            align-self: center;
+            justify-self: center;   
+            grid-row: 3 / 4;
+            color: $clr-white;
+            width: 300px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        &__btn {                        // Login Button
+            align-self: center;
+            justify-self: center;
+            grid-row: 4 / 5;
+            background: $clr-secondary;
+            color: $clr-white;
+            border: 2px solid $clr-secondary;
+            border-radius: 50px;
+            width: 120px;
+            height: 40px;
+            font-size: 15px;
+            font-family: $font2;
+            transition: all 300ms ease;
+            cursor: pointer;
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+}
+
+// .modal-close {                // Close Button for the modal
+//     grid-row: 2 / 3;
+//     grid-column: 3 / 4;
+//     span {
+//         color: white;
+//         &:hover {
+//             color: rgba(255, 255, 255, 0.7);
+//         }
+//     }
+//     cursor: pointer;
+// }
+
+.logo-container {    // Logo 
+    align-self: center;
+    justify-self: center;
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    width: 200px;
+    height: 100px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    gap: 10px;
+}
+.logobx {
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: center;
+    width: 100px;
+    height: 100px;
+    // z-index: 1000;
+}
+.wordbx {
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    color: rgb(255, 255, 255);
+    font-family: $font1;
+}
+
+
+
+
+
+
+
+.input-name,
+.input-password {
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        border: none;
+        outline: 0;
+        padding-top: 1.0em;
+        font-size: 16px;
+        appearance: none;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+.label-name,
+.label-password {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 2px solid rgb(255, 255, 255);
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 4px solid $clr-focus;
+            transform: translateX(-100%);
+            transition: transform 400ms ease;
+        }
+    }
+.span-name,
+.span-password {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: all 400ms ease;
+    }
+
+.input:focus + .label::after,
+.input:valid + .label::after {
+    transform: translateX(0);
+}
+
+.input:focus + .label .content,
+.input:valid + .label .content {
+    transform: translateY(-120%);
+    color: $clr-focus;
+    font-size: 14px;
+}

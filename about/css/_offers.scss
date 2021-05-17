@@ -1,0 +1,46 @@
+.offers {
+    background-color: rgb(236, 236, 236);
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10% 80% 10%;
+
+    &__card {
+        align-self: center;
+        justify-self: center;
+        grid-row: 2 / 3;
+        width: 350px;
+        height: 400px;
+        display: grid;
+        grid-template-rows: 10% 40% 10% 30% 10%;
+        grid-template-columns: 10% 80% 10%;
+    }
+    &__icon {
+        align-self: center;
+        justify-self: center;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        width: 120px;
+    }
+
+    &__title {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+        align-self: center;
+        justify-self: center;
+    }
+    &__desc {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+    }
+
+}
+.icon1 {
+    width: 130px;
+}
+.icon2 {
+    width: 100px;
+}

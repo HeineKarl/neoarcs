@@ -1,0 +1,196 @@
+.contact {
+    background-color: $clr-primary;
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 9% 20% 70% 1%;
+    grid-template-columns: 10% 80% 10%;
+
+    &__title {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        align-self: center;
+        justify-self: center;
+        color: white;
+        h3 {
+            font-size: 70px;
+        }
+    }
+}
+
+.formbx {
+    // box-shadow: 0 0 16px rgba(255, 255, 255, 0.2);
+    width: 100%;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 30% 5% 30% 5% 30%;
+    grid-template-rows: 1% 20% 40% 30% 9%;
+    position: relative;
+
+    &__name {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+    &__email {
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+    }
+    &__phone {
+        grid-row: 2 / 3;
+        grid-column: 5 / 6;
+        
+    }
+    &__textarea {
+        grid-row: 3 / 4;
+        grid-column: 1 / 6;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+    }
+    &__cta {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+        align-self: center;
+        justify-self: center;
+
+        button {
+            width: 180px;
+            height: 70px;
+            background: $clr-tertiary;
+            outline: 0;
+            border: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #80273a;
+            }
+        }
+    }
+}
+
+.input-center {
+    // background-color: yellow;
+    height: 50px;
+    width: 100%;
+    color: white;
+    align-self: center;
+    justify-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.input-name,
+.input-email,
+.input-phone {
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        border: none;
+        outline: 0;
+        padding-top: 1.0em;
+        font-size: 16px;
+        appearance: none;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+.label-name,
+.label-email,
+.label-phone {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 2px solid rgb(255, 255, 255);
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 4px solid $clr-focus;
+            transform: translateX(-100%);
+            transition: transform 400ms ease;
+        }
+    }
+.span-name,
+.span-email,
+.span-phone {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: all 400ms ease;
+    }
+
+
+    .input-textarea {
+        // background-color: rgba(255, 255, 255, 0.5);
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        border: 1px solid white;
+        outline: 0;
+        // padding-top: 30px;
+        padding: 30px 10px 0 10px;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        appearance: none;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+    .label-textarea {
+        // background-color: yellow;
+        position: absolute;
+        left: 10px;
+        top: -70%;
+        height: 100%;
+        width: 100%;
+        // border: 2px solid white;
+        pointer-events: none;
+        color: white;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // border-bottom: 4px solid $clr-focus;
+            transform: translateX(-100%);
+            transition: transform 400ms ease;
+        }
+    }
+    .span-textarea {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: all 400ms ease;
+    }
+
+.input:focus + .label::after,
+.input:valid + .label::after {
+    transform: translateX(0);
+}
+
+.input:focus + .label .content,
+.input:valid + .label .content {
+    transform: translateY(-110%);
+    color: $clr-focus;
+    font-size: 14px;
+}

@@ -1,0 +1,37 @@
+.main {
+    background: linear-gradient(125deg,  #00130a 10% ,#110312 40%, #163144 100%);
+    color: $clr-white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    &__title {
+        font-family: $font1;
+        font-size: 60px;
+        position: relative;
+        z-index: 1;
+    }
+    &__subtitle {
+        margin: 20px 0 0 0;
+        font-size: 20px;
+        position: relative;
+        z-index: 1;
+    }
+}
+.main-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10% 43% 2% 40% 5%;
+    grid-template-rows: 1fr;
+}
+
+.main-content {
+    grid-column: 4 / 5;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    transition: all 500ms ease;
+}

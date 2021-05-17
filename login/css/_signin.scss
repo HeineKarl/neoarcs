@@ -1,0 +1,168 @@
+.signin-modal {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    background: transparent;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    display: grid;
+    grid-template-rows: 5% 10% 15% 60% 10%;
+    grid-template-columns: 5% 1fr 10% 5%;
+    transition: all 500ms ease;
+    &:hover {
+        box-shadow: 0 0 16px rgba(255, 255, 255, 0.7);
+    }
+    
+    .formbx {
+        grid-row: 4 / 5;
+        grid-column: 2 / 4;
+        // background-color: lightcoral;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        gap: 10px;
+        grid-template-rows: 5% repeat(4, 22%) 5%;
+        &__name {
+            align-self: center;
+            justify-self: center;
+            grid-row: 2 / 3;
+            color: white;
+            width: 300px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        &__email {
+            align-self: center;
+            justify-self: center;
+            grid-row: 3 / 4;
+            color: white;
+            width: 300px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        &__password {
+            align-self: center;
+            justify-self: center;   
+            grid-row: 4 / 5;
+            color: white;
+            width: 300px;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        &__btn {
+            align-self: center;
+            justify-self: center;
+            grid-row: 5 / 6;
+            background: $clr-secondary;
+            color: $clr-white;
+            border: 2px solid $clr-secondary;
+            border-radius: 50px;
+            width: 120px;
+            height: 40px;
+            font-size: 15px;
+            font-family: $font2;
+            transition: all 300ms ease;
+            cursor: pointer;
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+}
+
+.logo-container {
+    align-self: center;
+    justify-self: center;
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+    width: 200px;
+    height: 100px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    gap: 10px;
+    // background-color: yellowgreen;
+}
+.logobx {
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    width: 100px;
+    height: 100px;
+}
+.wordbx {
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    font-family: $font1;
+}
+
+
+
+
+
+
+.input-name,
+.input-password {
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        color: rgb(12, 59, 75);
+        border: none;
+        outline: 0;
+        padding-top: 1.0em;
+        font-size: 16px;
+        appearance: none;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+.label-name,
+.label-password {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1.5px solid black;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 5px solid rgb(155, 3, 160);
+            transform: translateX(-100%);
+            transition: transform 400ms ease;
+        }
+    }
+.span-name,
+.span-password {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: all 400ms ease;
+    }
+
+.input:focus + .label::after,
+.input:valid + .label::after {
+    transform: translateX(0);
+}
+
+.input:focus + .label .content,
+.input:valid + .label .content {
+    transform: translateY(-160%);
+    color: rgb(155, 3, 160);
+    font-size: 14px;
+}
