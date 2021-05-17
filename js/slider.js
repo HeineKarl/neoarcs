@@ -142,7 +142,7 @@ function autoSliders() {
 // }
 // pauseSlider();
 // console.log(stopBtn);
-if (counter === 1) {
+if (counter === 0) {
   autoSliders();
 } else {
   console.log("Automation Not Working");
